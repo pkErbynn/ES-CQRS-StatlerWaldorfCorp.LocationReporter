@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using StatlerWaldorfCorp.LocationReporter.Events;
 using StatlerWaldorfCorp.LocationReporter.Models;
+using StatlerWaldorfCorp.LocationReporter.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

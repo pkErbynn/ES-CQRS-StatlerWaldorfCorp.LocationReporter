@@ -1,4 +1,6 @@
 ﻿using System;
+using StatlerWaldorfCorp.LocationReporter.Events;
+
 namespace StatlerWaldorfCorp.LocationReporter.Models
 {
 	public interface ICommandEventConverter

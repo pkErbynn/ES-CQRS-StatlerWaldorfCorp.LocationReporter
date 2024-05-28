@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using StatlerWaldorfCorp.LocationReporter.Events;
+using StatlerWaldorfCorp.LocationReporter.Models;
+using StatlerWaldorfCorp.LocationReporter.Services;
 
 namespace StatlerWaldorfCorp.LocationReporter.Controllers
 {
@@ -24,7 +26,7 @@ namespace StatlerWaldorfCorp.LocationReporter.Controllers
 		public ActionResult PostLocationReport(Guid memberId, [FromBody]LocationReport locationReport)
 		{
 			MemberLocationRecordedEvent locationRecordedEvent = converter.CommandToEvent(locationReport);
-			teamServiceClient.GetTeamMember(locationReport.memberId);
+			teamServiceClient.GetTeamForMember(locationReport.MemberId);
 			eventEmitter.EmitLocationRecordedEvent(locationRecordedEvent);
 
 			return this.Created($"api/members/{memberId}/locationreports/{locationReport.ReportId}", locationReport);

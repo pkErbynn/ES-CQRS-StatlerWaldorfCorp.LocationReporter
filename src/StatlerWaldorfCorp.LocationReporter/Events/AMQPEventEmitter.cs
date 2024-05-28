@@ -3,6 +3,7 @@ using System.Text;
 using Microsoft.AspNetCore.Builder.Extensions;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
+using StatlerWaldorfCorp.LocationReporter.Models;
 
 namespace StatlerWaldorfCorp.LocationReporter.Events
 {
@@ -24,7 +25,7 @@ namespace StatlerWaldorfCorp.LocationReporter.Events
             connectionFactory.Password = rabbitOptions.Password;
             connectionFactory.VirtualHost = rabbitOptions.VirtualHost;
             connectionFactory.HostName = rabbitOptions.HostName;
-            connectionFactory.Uri = rabbitOptions.Uri;
+            connectionFactory.Uri = new Uri(rabbitOptions.Uri);
 
             logger.LogInformation($"AMQP Event Emitter configured with URI {rabbitOptions.Uri}");
 
