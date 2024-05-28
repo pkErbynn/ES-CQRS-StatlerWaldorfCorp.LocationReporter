@@ -4,16 +4,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:30286",
-      "sslPort": 44333
+      "applicationUrl": "http://localhost:45455",
+      "sslPort": 44322
     }
   },
   "profiles": {
-    "es_locationreporter": {
+    "StatlerWaldorfCorp.LocationReporter": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7016;http://localhost:5063",
+      "applicationUrl": "https://localhost:7190;http://localhost:5281",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
