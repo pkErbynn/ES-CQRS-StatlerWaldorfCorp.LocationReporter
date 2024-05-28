@@ -1,0 +1,1 @@
+# ES-CQRS-StatlerWaldorfCorp.LocationReporter
