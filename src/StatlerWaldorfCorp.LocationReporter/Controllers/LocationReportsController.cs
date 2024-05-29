@@ -23,13 +23,25 @@ namespace StatlerWaldorfCorp.LocationReporter.Controllers
 			this.teamServiceClient = teamServiceClient;
 		}
 
+		[HttpPost]
 		public ActionResult PostLocationReport(Guid memberId, [FromBody]LocationReport locationReport)
 		{
 			MemberLocationRecordedEvent locationRecordedEvent = converter.CommandToEvent(locationReport);
-			teamServiceClient.GetTeamForMember(locationReport.MemberId);
+			// locationRecordedEvent.TeamId = teamServiceClient.GetTeamForMember(locationReport.MemberId);
 			eventEmitter.EmitLocationRecordedEvent(locationRecordedEvent);
 
 			return this.Created($"api/members/{memberId}/locationreports/{locationReport.ReportId}", locationReport);
+		}
+	}
+
+
+	[Route("/api/try")]
+	public class TryController: Controller
+	{
+		[HttpGet]
+		public string Try()
+		{
+			return "Got it!...";
 		}
 	}
 }
