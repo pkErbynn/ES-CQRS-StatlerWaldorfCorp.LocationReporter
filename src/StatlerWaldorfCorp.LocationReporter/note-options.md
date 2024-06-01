@@ -73,7 +73,8 @@ public class SomeService
 This structured approach ensures that configuration settings are managed efficiently, reducing errors and enhancing maintainability.
 
 
-### Off-Context
-Access endpoint via Swagger at `https://localhost:7190/swagger/index.html`
+### Accessing API from Swagger
+- Run `dotnet run --server.urls=http://0.0.0.0:9090`
+- Access endpoint via Swagger at `https://localhost:7190/swagger/index.html`
 
 
