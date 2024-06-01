@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "C#: StatlerWaldorfCorp.LocationReporter",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/src/StatlerWaldorfCorp.LocationReporter/StatlerWaldorfCorp.LocationReporter.csproj",
+            "launchConfigurationId": "TargetFramework=;StatlerWaldorfCorp.LocationReporter"
+        }
+    ]
+}
